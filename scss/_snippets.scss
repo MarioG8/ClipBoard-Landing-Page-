@@ -29,12 +29,13 @@
   }
 
   &__features {
-    text-align: left;
     @include breakpoint(lg) {
       margin-left: 55px;
+      text-align: left;
     }
     p {
       max-width: 340px;
+      display: inline-block;
     }
   }
 }
