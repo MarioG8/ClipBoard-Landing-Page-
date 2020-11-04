@@ -1,0 +1,40 @@
+.snippets {
+  &__content {
+    position: relative;
+    width: 100%;
+    @include breakpoint(lg) {
+      @include flexBox;
+    }
+  }
+  &__img,
+  &__features {
+    @include breakpoint(lg) {
+      flex: 1;
+    }
+  }
+  &__img {
+    margin-bottom: 60px;
+
+    @include breakpoint(lg) {
+      margin-bottom: 0px;
+    }
+    img {
+      width: 100%;
+      max-width: 500px;
+      @include breakpoint(lg) {
+        transform: translateX(-55px);
+        max-width: none;
+      }
+    }
+  }
+
+  &__features {
+    text-align: left;
+    @include breakpoint(lg) {
+      margin-left: 55px;
+    }
+    p {
+      max-width: 340px;
+    }
+  }
+}

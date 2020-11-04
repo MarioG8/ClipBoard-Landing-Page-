@@ -21,10 +21,6 @@
   &__logo {
     margin-bottom: 70px;
   }
-  &__subheadline {
-    margin-bottom: 50px;
-    line-height: 1.6;
-  }
 
   &__cta {
     @include flexBox;
