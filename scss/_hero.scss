@@ -1,10 +1,43 @@
 .hero {
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
+  padding-top: 120px;
+  background-image: url("images/bg-header-mobile.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  @include breakpoint(md) {
+    padding-top: 130px;
+    background-image: url("images/bg-header-desktop.png");
   }
+
+  h1 {
+    @include breakpoint(lg) {
+      br {
+        display: none;
+      }
+    }
+  }
+
   &__logo {
+    margin-bottom: 70px;
   }
   &__subheadline {
+    margin-bottom: 50px;
+    line-height: 1.6;
+  }
+
+  &__cta {
+    @include flexBox;
+    flex-direction: column;
+    @include breakpoint(md) {
+      display: block;
+    }
+    button:first-child {
+      margin-bottom: 20px;
+      @include breakpoint(md) {
+        margin-right: 16px;
+        margin-bottom: 0px;
+      }
+    }
   }
 }

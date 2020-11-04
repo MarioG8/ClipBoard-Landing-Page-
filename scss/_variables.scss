@@ -6,3 +6,36 @@ $cyan: hsl(171, 66%, 44%);
 $purple: hsl(233, 100%, 69%);
 $darkGray: hsl(210, 10%, 33%);
 $lightGray: hsl(201, 11%, 66%);
+
+// Media Quarries
+$breakpoints: (
+  xs: 400px,
+  sm: 699px,
+  md: 700px,
+  lg: 1000px,
+  xlg: 1300px,
+);
+
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint_mw($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (max-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+// Mixins
+
+@mixin flexBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
