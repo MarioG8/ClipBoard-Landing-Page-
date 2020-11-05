@@ -55,6 +55,21 @@ h2 {
     font-size: 2.125rem;
   }
 }
+// CTA buttons
+.cta-container {
+  @include flexBox;
+  flex-direction: column;
+  @include breakpoint(md) {
+    display: block;
+  }
+  button:first-child {
+    margin-bottom: 20px;
+    @include breakpoint(md) {
+      margin-right: 16px;
+      margin-bottom: 0px;
+    }
+  }
+}
 
 button,
 .button {
