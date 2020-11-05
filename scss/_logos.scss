@@ -1,0 +1,16 @@
+.logos {
+  &__container {
+    @include breakpoint(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .logo {
+      flex: 1;
+      border: 1px solid red;
+      img {
+        border: 1px solid blue;
+      }
+    }
+  }
+}
