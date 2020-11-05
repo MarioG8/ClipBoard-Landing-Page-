@@ -1,0 +1,35 @@
+.supercharge {
+  .content {
+    margin-bottom: 70px;
+
+    @include breakpoint(lg) {
+      margin-bottom: 40px;
+    }
+  }
+  &__columns {
+    @include breakpoint(lg) {
+      //   @include flexBox;
+      //   display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+
+  &__column {
+    margin-bottom: 60px;
+    @include breakpoint(lg) {
+      //   flex: 1;
+    }
+  }
+
+  &__icon {
+    height: 48px;
+    margin-bottom: 20px;
+    @include flexBox;
+
+    @include breakpoint(lg) {
+      margin-bottom: 36px;
+    }
+  }
+}
